@@ -9,4 +9,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - curl -T homework_0-1.2.3-Linux.deb -ualexscherba16:$BINTRAY_API_KEY "https://api.bintray.com/content/alexscherba16/otus-cpp/homework_0/$TRAVIS_BUILD_NUMBER/homework_0-1.2.3-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  - curl -T homework_0-1.2.4-Linux.deb -ualexscherba16:$BINTRAY_API_KEY "https://api.bintray.com/content/alexscherba16/otus-cpp/homework_0/$TRAVIS_BUILD_NUMBER/homework_0-1.2.4-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
