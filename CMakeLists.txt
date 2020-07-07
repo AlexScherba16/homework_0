@@ -8,12 +8,26 @@ project(homework_0 VERSION 1.2.3)
 # create binary file from source
 add_executable(homework_0 main.cpp)
 
+# create library
+add_library(homework_0_library lib.cpp)
+
+# copy lib to binary file
+target_include_directories(homework_0_library
+    PRIVATE "${CMAKE_BINARY_DIR}"
+)
+
 # set project properties
 set_target_properties(homework_0 PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
 
+target_link_libraries(homework_0 PRIVATE
+    homework_0_library
+)
+
+
+##########################################################################################
 set(CPACK_GENERATOR DEB)
 
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
