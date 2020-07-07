@@ -5,6 +5,10 @@ cmake_minimum_required(VERSION 3.2)
 # set project name / configuere CMake internals
 project(homework_0 VERSION 1.2.4)
 
+
+# create config file
+configure_file(version.h.in version.h)
+
 # create binary file from source
 add_executable(homework_0 main.cpp)
 
