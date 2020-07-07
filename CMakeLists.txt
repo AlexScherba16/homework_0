@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.2)
 
 # set project name / configuere CMake internals
-project(homework_0 VERSION 1.2.4)
+project(homework_0 VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 
 # create config file
