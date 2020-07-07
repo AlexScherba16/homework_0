@@ -1,9 +1,14 @@
+# sudo: true
 language: cpp
 before_script:
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
 script:
-- cmake .
+- mkdir build
+- cd build
+- cmake ..
+- cmake --build .
+- cmake --build . --target test  # run tests
 - cmake --build . --target package  # generate package
 deploy:
   provider: script
